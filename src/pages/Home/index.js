@@ -5,6 +5,7 @@ import { ReactComponent as Storefront } from "../../assets/storefront.svg";
 import { ReactComponent as Smartphoneblack } from "../../assets/smartphone_black.svg";
 import { ReactComponent as Grupo35 } from "../../assets/grupo35.svg";
 import { ReactComponent as Printblack } from "../../assets/print_black.svg";
+import { ReactComponent as WordSvg } from "../../assets/word_24.svg";
 export function Home() {
   return (
     <div className="home">
@@ -22,7 +23,7 @@ export function Home() {
           Marketplace e deixar sua loja prontinha para iniciar as vendas.
         </p>
         <form id="my-form" action="">
-          <fieldset>
+          <fieldset hidden>
             <legend>Quero vender no Pigz</legend>
             <p className="form-subtitle">
               Dê o primeiro passo para aumentar suas vendas
@@ -34,6 +35,7 @@ export function Home() {
                   type="text"
                   id="form-name"
                   placeholder="Leonercio Goesfeeld"
+                  className="input-wrapper-fill"
                 />
               </div>
               <div className="input-wrapper">
@@ -42,15 +44,29 @@ export function Home() {
                   type="email"
                   id="form-email"
                   placeholder="leonercio.goesfeeld@email.com"
+                  className="input-wrapper-fill"
                 />
               </div>
               <div className="input-wrapper">
                 <label htmlFor="form-tel">Telefone</label>
-                <input
-                  type="text"
-                  id="form-tel"
-                  placeholder="(95) 99876-5432"
-                />
+                <div className="input-tel">
+                  <div className="input-tel-wrapper-select">
+                    <WordSvg />
+                    <select
+                      id="country"
+                      name="country"
+                      className="input-tel-select"
+                    >
+                      <option className="input-tel-select">+55</option>
+                    </select>
+                  </div>
+                  <input
+                    type="text"
+                    id="form-tel"
+                    placeholder="(95) 99876-5432"
+                    className="input-tel-input"
+                  />
+                </div>
               </div>
             </div>
             <p className="form-footer">
@@ -67,16 +83,32 @@ export function Home() {
             <div className="fildset-wrapper">
               <div className="input-wrapper">
                 <label htmlFor="form-name">CEP</label>
-                <input type="text" id="form-name" placeholder="00000-00" />
+                <input
+                  type="text"
+                  id="form-name"
+                  placeholder="00000-00"
+                  className="input-wrapper-fill"
+                />
               </div>
               <div className="col-2">
                 <div className="input-wrapper">
                   <label htmlFor="form-name">Estado</label>
-                  <input type="text" id="form-name" placeholder="UF" />
+                  <input
+                    type="text"
+                    id="form-name"
+                    placeholder="UF"
+                    className="input-wrapper-fill"
+                  />
                 </div>
                 <div className="input-wrapper">
                   <label htmlFor="form-name">Cidade</label>
-                  <input type="text" id="form-name" placeholder="Selecione" />
+
+                  <input
+                    type="text"
+                    id="form-name"
+                    placeholder="Selecione"
+                    className="input-wrapper-fill"
+                  />
                 </div>
               </div>
               <div className="input-wrapper">
@@ -85,16 +117,27 @@ export function Home() {
                   type="text"
                   id="form-name"
                   placeholder="Avenida Brasil"
+                  className="input-wrapper-fill"
                 />
               </div>
               <div className="col-2">
                 <div className="input-wrapper">
                   <label htmlFor="form-name">Número</label>
-                  <input type="number" id="form-name" placeholder="123" />
+                  <input
+                    type="number"
+                    id="form-name"
+                    placeholder="123"
+                    className="input-wrapper-fill"
+                  />
                 </div>
                 <div className="input-wrapper">
                   <label htmlFor="form-name">Complemento</label>
-                  <input type="text" id="form-name" placeholder="Sala 1" />
+                  <input
+                    type="text"
+                    id="form-name"
+                    placeholder="Sala 1"
+                    className="input-wrapper-fill"
+                  />
                 </div>
               </div>
             </div>
@@ -102,7 +145,7 @@ export function Home() {
               Próximo
             </button>
           </fieldset>
-          <fieldset hidden>
+          <fieldset>
             <legend className="">Me conta um pouco sobre a sua loja</legend>
             <div className="fildset-wrapper">
               <div className="input-wrapper mrg-top-30">
@@ -111,6 +154,7 @@ export function Home() {
                   type="text"
                   id="form-company-name"
                   placeholder="Restaurante Todo Mundo Gosta"
+                  className="input-wrapper-fill"
                 />
               </div>
               <div className="input-wrapper">
@@ -119,6 +163,7 @@ export function Home() {
                   type="text"
                   id="form-cnpj"
                   placeholder="12.345.678/0001-99"
+                  className="input-wrapper-fill"
                 />
               </div>
               <div className="input-wrapper">
@@ -127,6 +172,7 @@ export function Home() {
                   type="text"
                   id="form-departments"
                   placeholder="Selecione"
+                  className="input-wrapper-fill"
                 />
               </div>
             </div>
@@ -313,16 +359,18 @@ export function Home() {
         <img src="./images/pigz-logo.png" width={80} alt="Logo da Pigz" />
         <p className="footer-legend mrg-bottom-24">Tudo que você precisa.</p>
         <p className="footer-title mrg-bottom-16">Baixe o APP</p>
-        <img
-          src="./images/selo-app-store.png"
-          height={30}
-          alt="Selo App Store"
-        />
-        <img
-          src="./images/selo-google-play.png"
-          height={30}
-          alt="Selo Google Play"
-        />
+        <div className="footer-img">
+          <img
+            src="./images/selo-app-store.png"
+            height={30}
+            alt="Selo App Store"
+          />
+          <img
+            src="./images/selo-google-play.png"
+            height={30}
+            alt="Selo Google Play"
+          />
+        </div>
         <p className="footer-title mrg-top-64 mrg-bottom-24">Pigz</p>
         <ul>
           <li>

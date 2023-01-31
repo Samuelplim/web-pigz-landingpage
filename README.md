@@ -38,5 +38,10 @@ After that run npm command <code>npm run android</code>
 ## Preview <a name="preview"></a>
 
 <div align="center">
-
+ <img src="preview/page1.png" alt="Preview"/>
+ <img src="preview/page2.png" alt="Preview"/>
+ <img src="preview/page3.png" alt="Preview"/>
+ <img src="preview/page4.png" alt="Preview"/>
+ <img src="preview/page5.png" alt="Preview"/>
+ <img src="preview/page6.png" alt="Preview"/>
 </div>

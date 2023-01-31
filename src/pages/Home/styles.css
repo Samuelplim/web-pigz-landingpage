@@ -74,7 +74,7 @@ fieldset{
 .input-wrapper label{
   font: 500 0.8rem var(--ff);
 }
-.input-wrapper input{
+.input-wrapper-fill{
   height:3rem;
   width: 100%;
   border: 1px solid #999;
@@ -82,6 +82,43 @@ fieldset{
   padding: 0.9rem 1rem;
   
   font: 400 0.9rem var(--ff);
+}
+.input-tel{
+  display: flex;
+  height:3rem;
+  border-radius: 1rem;
+  border: 1px solid #999;
+}
+.input-tel-wrapper-select{
+  display: flex;
+  padding-left: 0.7rem;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 1rem;
+}
+.input-tel-select{
+  border: 0px;
+  font: 300 0.8rem var(--ff);
+  color: #9F9F9F;
+  border-radius: 1rem;
+  background-color: #F0F0F0;
+  appearance: none;
+}
+.input-tel-wrapper-select::after {
+  content: "";
+  width: 7px;
+  height: 4px;
+  margin-right: 8px;
+  background-image: url(../../../public/images/ArrowDown2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-tel-input{
+  margin-left: 1rem;
+  border: 0px;
 }
 .form-btn{
   height: 3rem;
@@ -146,6 +183,7 @@ main{
 }
 .slide-btn-wrapper{
   display: flex;
+  justify-content: center;
   gap: 4px;
 }
 .slide-btn{
@@ -198,16 +236,19 @@ main{
   margin:4px 0 1.25rem 0;
 }
 .card ul{
-  font:400 0.8rem var(--ff);
+  font:400 0.9rem var(--ff);
   list-style-type:none;
   margin-bottom: 2.5srem;
 }
 .card ul li{
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 .card-price{
   font: 700 1.25rem var(--ff);
-  margin: 0.8rem 1.5rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 0.9rem 1.5rem;
+  margin: 2.5rem 0rem 1.25rem ;
 }
 .card-btn{
   height: 3.5rem;
@@ -217,6 +258,11 @@ main{
   color: #fff;
   background: linear-gradient(259deg, var(--bg-primary), var(--bg-segundary));
   box-shadow: 0px 1rem 1rem -0.8rem var(--bg-primary);
+  font: 500 1rem var(--ff);
+}
+.footer-img{
+  display:flex;
+  gap:0.7rem;
 }
 .footer-line{
   display: flex;
